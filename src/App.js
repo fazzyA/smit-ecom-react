@@ -19,7 +19,12 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: ""
+  },
+  {
+    path: "/products",
+    element: ""
   }
+
 ])
 
   return (
