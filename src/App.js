@@ -5,34 +5,43 @@ import Navbar from './components/Navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Signup from './components/Signup';
 import Home from './components/Home';
+import Cart from './components/Cart';
+import ContextProvider from './context/Context';
 function App() {
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />
-  },
-  {
-    path: "/signup",
-    element: <Signup />
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/signup",
+      element: <Signup />
 
-  },
-  {
-    path: "/login",
-    element: ""
-  },
-  {
-    path: "/products",
-    element: ""
-  }
+    },
+    {
+      path: "/login",
+      element: ""
+    },
+    {
+      path: "/products",
+      element: ""
+    },
+    {
+      path: "/cart",
+      element: <Cart />
+    }
 
-])
+
+  ])
 
   return (
-    
+
     <ChakraProvider>
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+      <ContextProvider>
+        <div className="App">
+          <RouterProvider router={router} />
+        </div>
+      </ContextProvider>
     </ChakraProvider>
   );
 }
