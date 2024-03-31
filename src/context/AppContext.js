@@ -213,6 +213,8 @@ export const AppContext = ({ children }) => {
   ];
 
   const [state, dispatch] = useReducer(AppReducer, {
+    num: 1,
+    arr: [,],
     products,
     cart: [],
   });

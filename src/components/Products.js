@@ -11,11 +11,18 @@ const Products = () => {
   console.log("producs", products);
   console.log("cart", cart);
   const handleCart = (product) => {
+    const newObj = {...product, qty: 1}
     dispatch({
         type: "ADD_ITEM_TO_CART",
-        payload: product
+        payload: newObj
     })
   };
+  const handleRemoveCart = (product) => {
+    dispatch({
+      type: "REMOVE_ITEM_CART",
+      payload: product
+    })
+  }
 
   return (
     <>
@@ -24,6 +31,7 @@ const Products = () => {
         <div>
           {item.title}
           <Button onClick={() => handleCart(item)}>Add to Cart</Button>
+          <Button onClick={() => handleRemoveCart(item)}>Remove item from Cart</Button>
         </div>
       ))}
     </>
