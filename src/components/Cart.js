@@ -7,8 +7,10 @@
 //
 import React from "react";
 import Navbar from "./Navbar";
+import { CartContext } from "../context/AppContext";
 
 const Cart = () => {
+  const [cart, ] = CartContext()
   return (
     <>
     <Navbar />

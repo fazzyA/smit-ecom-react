@@ -11,7 +11,7 @@ const Products = () => {
   console.log("producs", products);
   console.log("cart", cart);
   const handleCart = (product) => {
-    const newObj = {...product, qty: 1}
+    const newObj = {...product, qty: 0}
     dispatch({
         type: "ADD_ITEM_TO_CART",
         payload: newObj
