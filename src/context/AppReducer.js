@@ -4,6 +4,13 @@ export const AppReducer = (state, action) => {
   //   {id:2, title: "women"},
   // ]
   switch (action.type) {
+    // {
+  //   products,
+  //   cart: [],
+  // }
+  // {
+  //   cart: []
+  // }
     case "ADD_ITEM_TO_CART":
       return { ...state, cart: [...state.cart, action.payload]};
     case "REMOVE_ITEM_CART":
